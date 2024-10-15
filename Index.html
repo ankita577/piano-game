@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, orientation=landscape">
+    <link rel="stylesheet" href="Index.css">
+    <title>Piano-Game</title>
+  </head>
+
+  <body>
+
+    <div class="orientation-warning">
+      Please rotate your device to landscape mode.
+    </div>
+
+    <div class="wrapper">
+      <header> <!--Header Part-->
+        <h2>PIYUSH PIANO BRAND</h2>
+
+        <div class="column volume-slider"> <!--Volume Part-->
+
+          <span>Volume</span>
+
+          <input type="range" min="0" max="1" step="0.1" value="0.5">
+
+        </div>
+
+        <div class="keys-checkbox">  <!--Show keys part-->
+
+          <span>Show Keys</span>
+
+          <input type="checkbox" id="showKeys" checked>
+
+        </div>
+
+      </header>
+
+      <!--Piano Keys And Added sound effect here !-->
+
+      <ul class="piano-keys">
+
+        <!--Piano keys 1-->
+        <li class="keys white" data-key="A"><span>A</span>
+          <audio data-note="A" src="A.wav"></audio>
+        </li> 
+
+        <!--Piano keys 2-->
+        <li class="keys black" data-key="B"><span>B</span>
+          <audio data-note="B" src="B.wav"></audio>
+        </li>
+
+        <!--Piano keys 3-->
+        <li class="keys white" data-key="C"><span>C</span> 
+          <audio data-note="C" src="C.wav"></audio>
+        </li>
+
+        <!--Piano keys 4-->
+        <li class="keys black" data-key="D"><span>D</span>
+          <audio data-note="D" src="D.wav"></audio>
+        </li>
+
+        <!--Piano keys 5-->
+        <li class="keys white" data-key="E"><span>E</span>
+          <audio data-note="E" src="E.wav"></audio>
+        </li>
+
+        <!--Piano keys 6-->
+        <li class="keys black" data-key="F"><span>F</span>
+          <audio data-note="F" src="F.wav"></audio>
+        </li>
+
+        <!--Piano keys 7-->
+        <li class="keys white" data-key="G"><span>G</span>
+          <audio data-note="G" src="G.wav"></audio>
+        </li>
+
+          <!--Piano keys 8-->
+        <li class="keys black" data-key="H"><span>H</span>
+          <audio data-note="H" src="H.wav"></audio>
+        </li>
+
+        <!--Piano keys 9-->
+        <li class="keys white" data-key="I"><span>I</span>
+          <audio data-note="I" src="I.wav"></audio>
+        </li>
+
+        <!--Piano keys 10-->
+        <li class="keys black" data-key="J"><span>J</span>
+          <audio data-note="J" src="J.wav"></audio>
+        </li>
+
+        <!--Piano keys 11-->
+        <li class="keys white" data-key="K"><span>K</span>
+          <audio data-note="K" src="K.wav"></audio>
+        </li>
+
+        <!--Piano keys 12-->
+        <li class="keys black" data-key="L"><span>L</span>
+          <audio data-note="L" src="L.wav"></audio>
+        </li>
+
+        <!--Piano keys 13-->
+        <li class="keys white" data-key="M"><span>M</span>
+          <audio data-note="M" src="M.wav"></audio>
+        </li>
+
+        <!--Piano keys 14-->
+        <li class="keys black" data-key="N"><span>N</span>
+          <audio data-note="N" src="N.wav"></audio>
+        </li>
+
+        <!--Piano keys 15-->
+        <li class="keys white" data-key="O"><span>O</span>
+          <audio data-note="O" src="O.wav"></audio>
+        </li>
+
+        <!--Piano keys 16-->
+        <li class="keys black" data-key="P"><span>P</span>
+          <audio data-note="P" src="P.wav"></audio>
+        </li>
+
+        <!--Piano keys 17-->
+        <li class="keys white" data-key="Q"><span>Q</span>
+          <audio data-note="Q" src="new17.wav"></audio>
+        </li>
+
+        <!--Piano keys 18-->
+        <li class="keys black" data-key="R"><span>R</span>
+          <audio data-note="R" src="new15.wav"></audio>
+        </li>
+
+        <!--Piano keys 1-->
+        <li class="keys white" data-key="S"><span>S</span>
+          <audio data-note="S" src="new36.wav"></audio>
+        </li><!--Piano keys 19-->
+
+      </ul>
+
+    </div>
+
+    <!--JavaScript code-->
+    <script src="script.js"></script>
+
+  </body>
+</html>

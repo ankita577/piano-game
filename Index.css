@@ -1,0 +1,174 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwMTYtYy0wOF8xLWtzaDZtemEzLmpwZw.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper {
+    width:780px;
+    border-radius: 20px;
+    padding: 35px 40px;
+    background-color: DarkCyan;
+    display: block;
+}
+.wrapper header {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+header h2 {
+    font-size: 1.6rem;
+}
+header .column {
+    display: flex;
+    align-items: center;
+}
+header .column span {
+    font-weight: 500;
+    margin-left: 15px;
+    font-size: 1.19rem;
+}
+.piano-keys .key {
+    list-style: none;
+    color: black;
+}
+.volume-slider input {
+    outline: none;
+    accent-color: pink;
+}
+.keys-checkbox input {
+    width: 60px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+    background: pink;
+    border-radius: 30px;
+}
+.keys-checkbox input::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 5px;
+    border-radius: inherit;
+    position: absolute;
+    background: black;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.keys-checkbox input:checked::before {
+    left: 25px;
+    background: white;
+}
+.piano-keys .keys {
+    list-style: none;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    position: relative;
+}
+.piano-keys {
+    display: flex;
+    margin-top: 40px;
+    text-transform: uppercase;
+} 
+.piano-keys .white {
+    width: 70px;
+    height: 230px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background: linear-gradient(Orange,yellow, DarkOrange);
+}
+.piano-keys .black {
+    width: 44px;
+    height: 140px;
+    z-index:2;
+    margin:0-22px 0-22px;
+    border-radius: 0 0 5px 8px;
+    background: darkGreen;
+}
+.piano-keys span {
+    position: absolute;
+    bottom: 20px;
+    width:100%;
+    font-size: 1.13rem;
+    text-align: center;
+}
+.orientation-warning {
+    color: white;
+}
+
+/* Hover CSS part */
+
+.piano-keys .white:hover {
+    background: gold; /* Change background gradient */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+}
+
+.piano-keys .black:hover {
+    background: green; /* Change background color */
+    box-shadow: 0 3px 10px rgba(39, 36, 36, 0.2); /* Add a soft shadow */
+}
+
+.piano-keys .white:active {
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3); /* Slight indentation effect */
+    background: gold; /* Slight color change on press */
+}
+.piano-keys .black:active {
+    box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3); /* Slight indentation effect */
+    background: green; /* Slight color change on press */
+}
+
+
+/* responsive for orientation mobile screen */
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+    /* CSS rules for horizontal (landscape) mobile screens */
+   
+    .wrapper {
+      margin: 20px auto;
+      padding:20px auto;
+      width: 80%;
+      height:80%;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    .volume-slider input {
+        width: 50px;
+    }
+    .keys-checkbox input {
+        width: 40px;
+        height: 20px;
+    }
+    .keys-checkbox input:checked::before {
+        width: 10px; /*for white dout*/
+        height: 10px;
+    }
+    .keys-checkbox input::before {
+        width: 10px;  /*for black dout*/
+        height: 10px;  
+    }
+    .piano-keys {
+        margin: 20px auto;
+    }
+    .piano-keys .black {
+        height: 120px;
+    }
+    .piano-keys .white {
+        height: 180px;
+    }
+  }
